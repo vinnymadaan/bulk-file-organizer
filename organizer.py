@@ -25,9 +25,9 @@ def organize_directory(source_path: pathlib.Path):
     """
     print(f"Organizing files in: {source_path}") 
 
-    for item in source_path.iterdir(()):
+    for item in source_path.iterdir():
         if item.is_file():
-            file_extension = item.suffix
+            file_extension = item.suffix.lower()
             print(f" - Found file: {item.name}, Extension: {file_extension}")
 
 if __name__ == "__main__":
@@ -40,4 +40,5 @@ if __name__ == "__main__":
     if not source_path.exists() or not source_path.is_dir():
         print(f"Error: The path '{source_path}' does not exist or is not a directory.")
         sys.exit(1)
+    organize_directory(source_path)
     
