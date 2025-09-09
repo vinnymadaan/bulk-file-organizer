@@ -6,7 +6,8 @@
         ".gif",
         ".svg",
         ".bmp",
-        ".tiff"
+        ".tiff",
+        ".webp"
     ],
     "Documents": [
         ".pdf",
